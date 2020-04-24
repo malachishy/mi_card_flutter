@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(
-    MyApp(),
-  );
-}
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
@@ -19,7 +15,7 @@ class MyApp extends StatelessWidget {
               SizedBox(
                 height: 120,
               ),
-               // Used for alignment formatting.
+              // Used for alignment formatting.
               Container(
                 width: double.infinity,
               ),
