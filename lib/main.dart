@@ -11,47 +11,94 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.blueGrey[300],
+        backgroundColor: Colors.white,
         body: SafeArea(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              // Container 1
+              SizedBox(
+                height: 120,
+              ),
+               // Used for alignment formatting.
               Container(
-                width: 100,
-                color: Colors.white,
-                child: Center(
-                  child: Text('Container 1'),
+                width: double.infinity,
+              ),
+              CircleAvatar(
+                radius: 96,
+                backgroundImage: AssetImage(
+                  'images/avatar.jpg',
                 ),
               ),
-              // I nested a column widget inside the row so I could place two container widgets in the same x position.
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Container(
-                    height: 100,
-                    width: 100,
-                    color: Colors.yellow,
-                    child: Center(
-                      child: Text('Container 2'),
-                    ),
-                  ),
-                  Container(
-                    height: 100,
-                    width: 100,
-                    color: Colors.green,
-                    child: Center(
-                      child: Text('Container 3'),
-                    ),
-                  ),
-                ],
+              SizedBox(
+                height: 24,
               ),
-              // Container 3
-              Container(
-                width: 100,
-                color: Colors.blue,
-                child: Center(
-                  child: Text('Container 4'),
+              Text(
+                'Malachi Shy',
+                style: TextStyle(
+                  fontFamily: 'Noto Serif JP',
+                  fontSize: 48,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                  letterSpacing: 1,
+                ),
+              ),
+              SizedBox(height: 6),
+              Text(
+                'JUNIOR ACCOUNTANT',
+                style: TextStyle(
+                    fontFamily: 'Noto Serif JP',
+                    fontSize: 18,
+                    // fontWeight: FontWeight.bold,
+                    color: Colors.grey,
+                    letterSpacing: 2),
+              ),
+              SizedBox(
+                height: 36,
+                width: 204,
+                child: Divider(
+                  color: Colors.black,
+                ),
+              ),
+              Card(
+                color: Colors.grey[100],
+                margin: EdgeInsets.symmetric(vertical: 6, horizontal: 48),
+                child: Padding(
+                  padding: const EdgeInsets.all(4.0),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.phone,
+                      size: 36,
+                    ),
+                    title: Text(
+                      '(973) 592-8289',
+                      style: TextStyle(
+                        fontFamily: 'Noto Serif JP',
+                        fontSize: 21,
+                        letterSpacing: 1,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Card(
+                color: Colors.grey[100],
+                margin: EdgeInsets.symmetric(vertical: 18, horizontal: 48),
+                child: Padding(
+                  padding: const EdgeInsets.all(4.0),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.mail,
+                      size: 36,
+                    ),
+                    title: Text(
+                      'malachi.shy@gmail.com',
+                      style: TextStyle(
+                        fontFamily: 'Noto Serif JP',
+                        fontSize: 21,
+                        letterSpacing: 1,
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ],
