@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
               SizedBox(
                 height: 120,
               ),
-              // Used for alignment formatting.
+              // Container used for alignment formatting.
               Container(
                 width: double.infinity,
               ),
